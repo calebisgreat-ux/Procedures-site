@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Procedures — Starter</title>
+  <meta name="description" content="A lightweight, clean-room template for a procedures library." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">★</span>
+      <span class="brand-text">Procedures</span>
+    </div>
+    <div class="search-wrap">
+      <input id="search" type="search" placeholder="Search procedures…" aria-label="Search procedures">
+    </div>
+    <div class="topbar-actions">
+      <button id="themeToggle" class="btn ghost" title="Toggle theme">🌓</button>
+      <a id="newLink" class="btn primary" href="#" target="_self" title="Your custom link">Open: <span id="linkText"></span></a>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar" aria-label="Procedure list">
+      <div class="section-head">All Procedures</div>
+      <ul id="procList" class="list"></ul>
+    </aside>
+
+    <section class="content" aria-live="polite">
+      <article id="procDetail" class="card">
+        <h1 id="procTitle">Welcome 👋</h1>
+        <p>This is a <strong>clean-room</strong> template that mimics the general idea of a procedures knowledge base—without copying any proprietary content or design.</p>
+        <p>Use the sidebar to pick a sample item, or add your own in <code>data/procedures.json</code>. The search bar filters the list instantly.</p>
+
+        <div class="callout info">
+          <strong>Custom link:</strong> Set your desired URL in <code>config.js</code> under <code>NEW_LINK</code>. The button in the top-right will open it.
+        </div>
+
+        <h2>Features</h2>
+        <ul>
+          <li>Instant search/filter</li>
+          <li>Client-side routing via hash (e.g. <code>#/procedure/onboarding</code>)</li>
+          <li>Responsive layout + light/dark theme</li>
+          <li>Keyboard: <kbd>/</kbd> focuses search, <kbd>Esc</kbd> clears</li>
+        </ul>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>Made with ❤️ — You own your content.</span>
+  </footer>
+
+  <script src="./config.js"></script>
+  <script src="./scripts.js"></script>
+</body>
+</html>
